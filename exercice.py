@@ -6,22 +6,44 @@ from typing import List
 
 
 def convert_to_absolute() -> float:
-    return 0.0
+    mon_nombre = float(input('Veuillez entrer un nombre: '))
+    if mon_nombre < 0:
+        mon_nombre = -mon_nombre
+    # return abs(mon_nombre)
+    return mon_nombre
 
 
 def use_prefixes() -> List[str]:
     prefixes, suffixes = 'JKLMNOP', 'ack'
+    resultat = []
+    for prefixe in prefixes:
+        nom = prefixe + suffixe
+        resultat.append(nom)
+    return resultat
 
-    return [""]
+
 
 
 def prime_integer_summation() -> int:
-    return 0
+     nombrePremier = 0
+    nombre = 2
+    somme = 0
+    while (nombrePremier < 100):
+        estPremier = True
+        for i in range(1,nombre+1):
+            if (nombre % i == 0 and i != 1 and i!= nombre):
+                estPremier = False
+                break
+        if estPremier:
+            nombrePremier += 1
+            somme += nombre
+        nombre += 1
+    return somme 
 
 
 def factorial(number: int) -> int:
-    return 0
-
+    
+ 
 
 def use_continue() -> None:
     pass
