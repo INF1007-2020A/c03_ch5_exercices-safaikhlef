@@ -42,13 +42,29 @@ def prime_integer_summation() -> int:
 
 
 def factorial(number: int) -> int:
+    result = 1
+    if number != 0:
+        for i in range (number):
+            result *= (number - i)
+        return result  
     
+    #for i in range (1,number):
+     #   number *= (number-i)
+    #return number
+    #ne fontionne pas avec 0
  
-
 def use_continue() -> None:
-    pass
-
-
+    for chiffre in range (1, 11):
+        if chiffre == 5:
+            continue
+        print(chiffre)
+        
+       # for chiffre in range (1, 11):
+        #if chiffre == 5:
+         #   pass
+        #else :
+         #   print (chiffre 
+    
 def main() -> None:
     print(f"La valeur absolue du nombre est {convert_to_absolute()}")
 
